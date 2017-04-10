@@ -1,5 +1,4 @@
 # SAP particulars
-# Enter the components and views as comma listed params.
 protocol: ""
 host: ""
 port: 
