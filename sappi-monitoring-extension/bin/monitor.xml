@@ -1,0 +1,23 @@
+<monitor>
+        <name>ZabbixMonitor</name>
+        <type>managed</type>
+        <description>Zabbix monitor</description>
+        <monitor-configuration></monitor-configuration>
+        <monitor-run-task>
+                <execution-style>periodic</execution-style>
+                <execution-frequency-in-seconds>60</execution-frequency-in-seconds>
+                <name>Zabbix Monitor Run Task</name>
+                <display-name>Zabbix Monitor Task</display-name>
+                <description>Zabbix Monitor Task</description>
+                <type>java</type>
+                <execution-timeout-in-secs>60</execution-timeout-in-secs>
+                <task-arguments>
+                    <!-- config file-->
+                    <argument name="config-file" is-required="true" default-value="monitors/ZabbixMonitor/config.yml" />
+		       </task-arguments>
+                <java-task>
+                    <classpath>zabbix-monitoring-extension.jar</classpath>
+                    <impl-class>com.appdynamics.monitors.zabbix.ZabbixMonitor</impl-class>
+                </java-task>
+        </monitor-run-task>
+</monitor>

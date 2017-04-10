@@ -1,0 +1,3 @@
+com\appdynamics\monitors\sappi\StatsCollector\PiStatsCollector.class
+com\appdynamics\monitors\sappi\config\Configuration.class
+com\appdynamics\monitors\sappi\sappiMonitor.class

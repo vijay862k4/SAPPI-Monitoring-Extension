@@ -1,0 +1,10 @@
+# SAP particulars
+# Enter the components and views as comma listed params.
+protocol: "http"
+host: "10.1.1.56"
+port: 8030
+username: "ssubramanian"
+password: "gobi072013"
+component: "is.30.dbnsapppi01"
+view: "SR_ABAP_ENTRY_OVERVIEW_XPI"
+metricPathPrefix: "Custom Metrics|SAP|"

@@ -1,0 +1,23 @@
+<monitor>
+        <name>PiMonitor</name>
+        <type>managed</type>
+        <description>SAP PI monitor</description>
+        <monitor-configuration></monitor-configuration>
+        <monitor-run-task>
+                <execution-style>periodic</execution-style>
+                <execution-frequency-in-seconds>60</execution-frequency-in-seconds>
+                <name>PI Monitor Run Task</name>
+                <display-name>SAP Monitor Task</display-name>
+                <description>SAP Monitor Task</description>
+                <type>java</type>
+                <execution-timeout-in-secs>60</execution-timeout-in-secs>
+                <task-arguments>
+                    <!-- config file-->
+                    <argument name="config-file" is-required="true" default-value="monitors/sappimonitor/config.yml" />
+		       </task-arguments>
+                <java-task>
+                    <classpath>sappi-monitoring-extension.jar</classpath>
+                    <impl-class>com.appdynamics.monitors.sappi.sappiMonitor</impl-class>
+                </java-task>
+        </monitor-run-task>
+</monitor>
